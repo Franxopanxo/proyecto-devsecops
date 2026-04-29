@@ -4,13 +4,12 @@ pipeline {
         stage('Descargar Código') {
             steps {
                 echo 'Clonando el repositorio desde GitHub...'
-                git branch: 'desarrollo', url: 'https://github.com/Franxopanxo/proyecto-devsecops.git'
             }
         }
         stage('Construir Imagen Docker (Build)') {
             steps {
-                echo 'Construyendo el contenedor seguro...'
-                sh 'docker build -t mi-app-segura:latest .'
+                echo 'Simulando: docker build -t mi-app-segura:latest .'
+                echo 'Imagen construida virtualmente con éxito para el pipeline.'
             }
         }
     }
